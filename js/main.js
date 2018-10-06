@@ -104,7 +104,7 @@ $( document ).ready(function() {
   });
   logoAnimation
     .add({
-      targets: '#logo #flow-stroke path, #flow path',
+      targets: '#logo #flow-stroke path, #logo #flow path, #logo #flow-path-out path',
       opacity: 0,
       duration: 1,
     })
@@ -163,13 +163,23 @@ $( document ).ready(function() {
     })
     .add({
       targets: '#logo #flow-path-out path',
-      strokeDashoffset: [anime.setDashoffset, 0],
+      opacity: 1,
+      duration: 1,
+    })
+    .add({
+      targets: '#logo #flow-path-in path',
+      opacity: 0,
+      duration: 1,
+    })
+    .add({
+      targets: '#logo #flow-path-out path',
+      strokeDashoffset: [0,anime.setDashoffset],
       easing: 'easeInOutSine',
       duration: 200,
       delay: function(el, i) { return i * 50 },
     })
     .add({
-      targets: '#logo #flow-path-in path',
+      targets: '#logo #flow-path-out path',
       opacity: 0,
       duration: 1,
     })
