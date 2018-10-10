@@ -97,6 +97,35 @@ $(window).on('load', function() {
     });
 
 
+    // scrollreveal
+    ScrollReveal().reveal('.scrollreveal', { delay: 0 , duration:1000, reset:false, distance:'50px', origin:'bottom'});
+
+    // carousel articles
+    $('.article-carousel').slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 750,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+      ]
+    });
 
 })(jQuery);
 
@@ -107,9 +136,9 @@ $( document ).ready(function() {
   var pointpath_2 = anime.path("#pointpath_2")
   var pointpath_3 = anime.path("#pointpath_3")
   var logoAnimation = anime.timeline({
-    // direction: 'alternate',
-    // loop: 3,
-    autoplay: false
+    direction: 'alternate',
+    loop: '2000',
+    autoplay: true
   });
   logoAnimation
     .add({
@@ -253,6 +282,6 @@ $( document ).ready(function() {
       elasticity: 700
     })
 
-  logoAnimation.play()
+  // logoAnimation.play()
 
 })

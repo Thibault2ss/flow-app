@@ -19,10 +19,16 @@
 	<link rel="stylesheet" href="css/animate.css"/>
 	<link rel="stylesheet" href="css/owl.carousel.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
 
 
   <!-- ANIMEJS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+
+  <!-- scroll reveal -->
+  <script src="https://unpkg.com/scrollreveal"></script>
+
 
 
 	<!--[if lt IE 9]>
@@ -48,11 +54,11 @@
 			<a href="" class="site-btn">Sign Up Free</a>
 			<nav class="main-menu">
 				<ul class="menu-list">
-					<li><a href="#team">Solution</a></li>
-					<li><a href="">Features</a></li>
-					<li><a href="">News</a></li>
-					<li><a href="">About</a></li>
-					<li><a href="">Contact</a></li>
+					<li><a href="#solution">Solution</a></li>
+					<li><a href="#features">Features</a></li>
+					<!-- <li><a href="">News</a></li> -->
+					<li><a href="#team">Team</a></li>
+					<li><a href="#" data-toggle="modal" data-target="#contactModal">Contact</a></li>
 				</ul>
 			</nav>
 		</div>
@@ -62,7 +68,7 @@
 
 	<!-- Hero section -->
 	<section class="hero-section">
-		<div class="container">
+		<div class="container scrollreveal">
 			<div class="row">
 				<div class="col-md-6 hero-text">
           <svg id="logo" style="max-width:400px;transform: translateX(-30px);" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -168,10 +174,10 @@
           <h2>We Love Learning</h2>
 					<!-- <h2>Love Learning, <br><span>Unlock your potential</span></h2> -->
 					<h4>Sit back & Evolve, however you want, whenever you want</h4>
-					<form class="hero-subscribe-from">
+					<!-- <form class="hero-subscribe-from">
 						<input type="text" placeholder="Enter your email">
 						<button class="site-btn sb-gradients">Get Started</button>
-					</form>
+					</form> -->
 				</div>
 				<div class="col-md-6">
 					<img src="img/laptop.png" class="laptop-image" alt="">
@@ -183,24 +189,26 @@
 
 
 	<!-- About section -->
-	<section id="solution" class="about-section spad">
+	<section id="solution" class="about-section spad scrollreveal">
 		<div class="container">
       <div class="row">
         <div class="col-lg-6 offset-lg-6 about-text">
           <h2>Lifelong Learning Platform</h2>
           <!-- <h5>Flow is a lifelong learning platform</h5> -->
-          <p>Flow helps you to develop your skillset, seamlessly, every day. Flow’s experience is more engaging, more personalized and more flexible than any other learning tool. </p>
+          <p>Flow helps you to develop your skillset, seamlessly, every day. <br> <br>
+          Flow’s experience is more engaging, more personalized and more flexible than any other learning tool's. <br> <br>
+          We find the best content available out there, tailored to your profile. You'll love it.</p>
         </div>
       </div>
 			<div class="about-img">
-				<img src="img/question.svg" alt="">
+				<img src="img/laptop.svg" alt="">
 			</div>
 		</div>
 	</section>
 	<!-- About section end -->
 
 
-  <section id="solution" class="about-section spad">
+  <section id="solution" class="about-section spad scrollreveal">
     <div class="container">
       <div class="d-flex flex-row bd-highlight mb-3 mt-5 justify-content-center">
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -226,7 +234,7 @@
 
 
 	<!-- Features section -->
-	<section id="" class="features-section spad gradient-bg">
+	<section id="features" class="features-section spad gradient-bg scrollreveal">
 		<div class="container text-white">
 			<div class="section-title text-center">
 				<h2>Flow is</h2>
@@ -290,10 +298,10 @@
 
 
 	<!-- Process section -->
-	<section class="process-section spad">
+	<section class="process-section spad scrollreveal">
 		<div class="container">
 			<div class="section-title text-center">
-				<h2>Get Started With Bitcoin</h2>
+				<h2>How we do that</h2>
 				<p>Start learning about Bitcoin with interactive tutorials. It’s fun, easy, and takes only a few minutes! </p>
 			</div>
 			<div class="row">
@@ -331,7 +339,7 @@
 
 
 	<!-- Fact section -->
-	<section class="fact-section gradient-bg">
+	<section class="fact-section gradient-bg scrollreveal">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-md-6 col-lg-3">
@@ -369,7 +377,7 @@
 
 
 	<!-- Team section -->
-	<section id="team" class="team-section spad">
+	<section id="team" class="team-section spad scrollreveal">
 		<div class="container">
 			<div class="section-title text-center">
 				<h2>Meet Our Team</h2>
@@ -381,7 +389,7 @@
 				<div class="member-text">
 					<div class="member-img set-bg" data-setbg="img/member/1.png"></div>
 					<h2>Bertrand Bevillard</h2>
-					<span>CTO, Co-Founder</span>
+					<span>Co-Founder - CTO</span>
 				</div>
 				<div class="member-social">
 					<a href=""><i class="fa fa-facebook"></i></a>
@@ -392,7 +400,7 @@
 					<div class="member-img mf set-bg" data-setbg="img/member/1.png"></div>
 					<div class="member-meta">
 						<h2>Bertrand Bevillard</h2>
-						<span>CTO, Co-Founder</span>
+						<span>Co-Founder - CTO</span>
 					</div>
 					<p>#coding #data</br>
             Ex control engineer at KittyHawk (eVTOL transportation) in California -
@@ -476,7 +484,7 @@
 
 
 	<!-- Review section -->
-	<section class="review-section spad">
+	<section class="review-section spad scrollreveal">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8 push-8">
@@ -525,7 +533,7 @@
 
 
 	<!-- Newsletter section -->
-	<section class="newsletter-section gradient-bg">
+	<section class="newsletter-section gradient-bg scrollreveal">
 		<div class="container text-white">
 			<div class="row">
 				<div class="col-lg-7 newsletter-text">
@@ -546,60 +554,76 @@
 
 
 	<!-- Blog section -->
-	<section class="blog-section spad">
+	<section class="blog-section spad scrollreveal">
 		<div class="container">
 			<div class="section-title text-center">
-				<h2>Latest News</h2>
-				<p>Bitcoin is the simplest way to exchange money at very low cost.</p>
+				<h2>About EdTech</h2>
+				<!-- <p>Bitcoin is the simplest way to exchange money at very low cost.</p> -->
 			</div>
-			<div class="row">
+			<div class="row article-carousel">
 				<div class="col-md-4">
-					<div class="blog-item">
-						<figure class="blog-thumb">
-							<img src="img/blog/1.jpg" alt="">
-						</figure>
-						<div class="blog-text">
-							<div class="post-date">03 jan 2018</div>
-							<h4 class="blog-title"><a href="">Coinbase to Reopen the GDAX Bitcoin Cash-Euro Order Book</a></h4>
-							<div class="post-meta">
-								<a href=""><span>by</span> Admin</a>
-								<a href=""><i class="fa fa-heart-o"></i> 234 Likes</a>
-								<a href=""><i class="fa fa-comments-o"></i> 08 comments</a>
-							</div>
-						</div>
-					</div>
+          <a target="_blank" href="https://www.maddyness.com/2018/09/06/la-french-edtech-en-pleine-croissance/">
+  					<div class="blog-item p-4">
+              <div class="blog-thumb" style="background-image:url(https://www.maddyness.com/wp-content/uploads/2018/09/french-edtech-924x462.jpg);height:200px;"></div>
+  						<div class="blog-text">
+  							<div class="post-date">06 Sep 2018 - Maddyness</div>
+  							<h4 class="blog-title">French EdTech is growing fast</h4>
+  							<!-- <div class="post-meta">
+  								<a href=""><span>by</span> Svenia Busson</a>
+  								<a href=""><i class="fa fa-heart-o"></i> 234 Likes</a>
+  								<a href=""><i class="fa fa-comments-o"></i> 08 comments</a>
+  							</div> -->
+  						</div>
+  					</div>
+          </a>
 				</div>
 				<div class="col-md-4">
-					<div class="blog-item">
-						<figure class="blog-thumb">
-							<img src="img/blog/2.jpg" alt="">
-						</figure>
-						<div class="blog-text">
-							<div class="post-date">28 dec 2018</div>
-							<h4 class="blog-title"><a href="">Blockchain Rolls Out Trading Feature for 22 States in the U.S</a></h4>
-							<div class="post-meta">
-								<a href=""><span>by</span> Admin</a>
-								<a href=""><i class="fa fa-heart-o"></i> 234 Likes</a>
-								<a href=""><i class="fa fa-comments-o"></i> 08 comments</a>
-							</div>
-						</div>
-					</div>
+          <a target="_blank" href="https://blog.angelsquare.co/se-former-autrement-zoom-sur-ledtech-b95251a6d2e1">
+  					<div class="blog-item p-4">
+  						<div class="blog-thumb" style="background-image:url(https://cdn-images-1.medium.com/max/1600/1*9gr3JwiTTtl9qzT4EdgxJQ.jpeg);height:200px;"></div>
+  						<div class="blog-text">
+  							<div class="post-date">Sep 2018 - AngelSquare</div>
+  							<h4 class="blog-title">Se former autrement : zoom sur l’EdTech</h4>
+  							<!-- <div class="post-meta">
+  								<a href=""><span>by</span> Admin</a>
+  								<a href=""><i class="fa fa-heart-o"></i> 234 Likes</a>
+  								<a href=""><i class="fa fa-comments-o"></i> 08 comments</a>
+  							</div> -->
+  						</div>
+  					</div>
+          </a>
 				</div>
 				<div class="col-md-4">
-					<div class="blog-item">
-						<figure class="blog-thumb">
-							<img src="img/blog/3.jpg" alt="">
-						</figure>
-						<div class="blog-text">
-							<div class="post-date">28 aug 2018</div>
-							<h4 class="blog-title"><a href="">This Week in Bitcoin: Up, Down and Sideways</a></h4>
-							<div class="post-meta">
-								<a href=""><span>by</span> Admin</a>
-								<a href=""><i class="fa fa-heart-o"></i> 234 Likes</a>
-								<a href=""><i class="fa fa-comments-o"></i> 08 comments</a>
-							</div>
-						</div>
-					</div>
+          <a  target="_blank"  href="https://www.weforum.org/agenda/2018/09/how-smartphones-can-close-the-global-skills-gap-for-billions">
+  					<div class="blog-item p-4">
+              <div class="blog-thumb" style="background-image:url(https://assets.weforum.org/article/image/large_QldXnL0G6gSeUeRueTaMF4t1uWCS52lCqPc3NQFVOGE.jpg);height:200px;"></div>
+  						<div class="blog-text">
+  							<div class="post-date">17 Sep 2018 - WeForum</div>
+  							<h4 class="blog-title">How technology can bridge the skills gap it created</h4>
+  							<!-- <div class="post-meta">
+  								<a href=""><span>by</span> Admin</a>
+  								<a href=""><i class="fa fa-heart-o"></i> 234 Likes</a>
+  								<a href=""><i class="fa fa-comments-o"></i> 08 comments</a>
+  							</div> -->
+  						</div>
+  					</div>
+          </a>
+				</div>
+        <div class="col-md-4">
+          <a  target="_blank"  href="https://www.weforum.org/agenda/2018/09/how-smartphones-can-close-the-global-skills-gap-for-billions">
+  					<div class="blog-item px-4 py-5">
+              <div class="blog-thumb" style="background-image:url(https://assets.weforum.org/article/image/large_QldXnL0G6gSeUeRueTaMF4t1uWCS52lCqPc3NQFVOGE.jpg);height:200px;"></div>
+  						<div class="blog-text">
+  							<div class="post-date">17 Sep 2018 - WeForum</div>
+  							<h4 class="blog-title">How technology can bridge the skills gap it created</h4>
+  							<!-- <div class="post-meta">
+  								<a href=""><span>by</span> Admin</a>
+  								<a href=""><i class="fa fa-heart-o"></i> 234 Likes</a>
+  								<a href=""><i class="fa fa-comments-o"></i> 08 comments</a>
+  							</div> -->
+  						</div>
+  					</div>
+          </a>
 				</div>
 			</div>
 		</div>
@@ -608,27 +632,27 @@
 
 
 	<!-- Footer section -->
-	<footer class="footer-section">
+	<footer class="footer-section scrollreveal">
 		<div class="container">
 			<div class="row spad">
 				<div class="col-md-6 col-lg-3 footer-widget">
 					<img src="img/logo.png" class="mb-4" alt="">
-					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia dese mollit anim id est laborum.</p>
-					<span>
+					<p>We leverage the world’s educational resources and talents to arouse your appetite for learning.<br>  We help you unlock your potential</p>
+					<!-- <span>
 Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-</span>
+</span> -->
 				</div>
-				<div class="col-md-6 col-lg-2 offset-lg-1 footer-widget">
-					<h5 class="widget-title">Resources</h5>
+				<div class="col-md-5 offset-md-1 col-lg-2 offset-lg-4 footer-widget">
+					<h5 class="widget-title">Quick Links</h5>
 					<ul>
-						<li><a href="#">How to Buy Coin</a></li>
-						<li><a href="#">Coin Overview</a></li>
-						<li><a href="#">Blog News</a></li>
-						<li><a href="#">How to Sell Coin</a></li>
-						<li><a href="#">Purchase Theme</a></li>
+            <li><a href="#solution">Solution</a></li>
+  					<li><a href="#features">Features</a></li>
+  					<li><a href="#team">Team</a></li>
+  					<li><a href="#"  data-toggle="modal" data-target="#contactModal">Contact</a></li>
+
 					</ul>
 				</div>
-				<div class="col-md-6 col-lg-2 offset-lg-1 footer-widget">
+				<!-- <div class="col-md-6 col-lg-2 offset-lg-1 footer-widget">
 					<h5 class="widget-title">Quick Links</h5>
 					<ul>
 						<li><a href="#">Network Stats</a></li>
@@ -637,30 +661,31 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 						<li><a href="#">Exchange Markets</a></li>
 						<li><a href="#">Get Theme</a></li>
 					</ul>
-				</div>
+				</div> -->
 				<div class="col-md-6 col-lg-3 footer-widget pl-lg-5 pl-3">
 					<h5 class="widget-title">Follow Us</h5>
 					<div class="social">
-						<a href="" class="facebook"><i class="fa fa-facebook"></i></a>
-						<a href="" class="google"><i class="fa fa-google-plus"></i></a>
-						<a href="" class="instagram"><i class="fa fa-instagram"></i></a>
-						<a href="" class="twitter"><i class="fa fa-twitter"></i></a>
+						<a href="https://www.facebook.com/Flow-App-273939376786823/" target="_blank" class="facebook"><i class="fa fa-facebook"></i></a>
+						<!-- <a href="" class="google"><i class="fa fa-google-plus"></i></a> -->
+						<!-- <a href="" class="instagram"><i class="fa fa-instagram"></i></a> -->
+						<!-- <a href="" class="twitter"><i class="fa fa-twitter"></i></a> -->
+            <a href="https://www.linkedin.com/company/flow-learning/" target="_blank"  class="linkedin"><i class="fa fa-linkedin"></i></a>
 					</div>
 				</div>
 			</div>
 			<div class="footer-bottom">
 				<div class="row">
 					<div class="col-lg-4 store-links text-center text-lg-left pb-3 pb-lg-0">
-						<a href=""><img src="img/appstore.png" alt="" class="mr-2"></a>
-						<a href=""><img src="img/playstore.png" alt=""></a>
+						<!-- <a href="#"><img src="img/appstore.png" alt="" class="mr-2"></a>
+						<a href="#"><img src="img/playstore.png" alt=""></a> -->
 					</div>
 					<div class="col-lg-8 text-center text-lg-right">
 						<ul class="footer-nav">
-							<li><a href="">DPA</a></li>
-							<li><a href="">Terms of Use</a></li>
-							<li><a href="">Privacy Policy </a></li>
-							<li><a href="">support@company.com</a></li>
-							<li><a href="">(123) 456-7890</a></li>
+							<li><a href="#">DPA</a></li>
+							<li><a href="#">Terms of Use</a></li>
+							<li><a href="#">Privacy Policy </a></li>
+							<li><a href="">info@flow-app.io</a></li>
+							<!-- <li><a href="#">(123) 456-7890</a></li> -->
 						</ul>
 					</div>
 				</div>
@@ -668,11 +693,52 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 		</div>
 	</footer>
 
+  <!-- Modal Contact form -->
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Contact Form</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="contact-form" action="https://formspree.io/info@flow-app.io" method="POST">
+						<div class="row">
+              <div class="col-md-12">
+								<div class="form-group">
+									<input class="check-form" type="email" placeholder="Email Adress*:" name="_replyto" required>
+									<span><i class="ti-check"></i></span>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<input class="check-form" type="text" placeholder="Name:" name="name">
+									<span><i class="ti-check"></i></span>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="form-group">
+									<textarea placeholder="Your Message" name="message"></textarea>
+								</div>
+							</div>
+						</div>
+            <div class="d-flex justify-content-center flex-wrap">
+              <button type="button" class="site-btn btn-secondary mt-4 mx-2" data-dismiss="modal">Close</button>
+              <input type="submit" class="site-btn sb-gradients mt-4 mx-2" value="Send" style="max-width:170px">
+            </div>
+					</form>
+        </div>
+      </div>
+    </div>
+  </div>
 
 	<!--====== Javascripts & Jquery ======-->
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>
