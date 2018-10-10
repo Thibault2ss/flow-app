@@ -8,7 +8,6 @@
 
 'use strict';
 
-
 $(window).on('load', function() {
 	/*------------------
 		Preloder
@@ -19,6 +18,16 @@ $(window).on('load', function() {
 });
 
 (function($) {
+  /*------------------
+		Smooth scroll to anchors
+	--------------------*/
+  $(document).on('click', 'a[href^="#"]:not([role="tab"])', function (event) {
+      event.preventDefault();
+
+      $('html, body').animate({
+          scrollTop: $($.attr(this, 'href')).offset().top
+      }, 500);
+  });
 
 	/*------------------
 		Navigation

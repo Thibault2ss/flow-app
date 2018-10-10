@@ -435,10 +435,11 @@ ol {
 	margin-bottom: 45px;
 }
 
-.feature i {
+.feature i, .feature img {
 	font-size: 48px;
 	float: left;
 	padding-top: 10px;
+  max-width:55px;
 }
 
 .feature .feature-content {
@@ -544,11 +545,14 @@ ol {
 
 .team-members {
 	margin: 0 -10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
 }
 
 .member {
 	background: #fff;
-	width: calc(20% - 25px);
+	width: calc(22% - 20px);
 	display: inline-block;
 	margin: 0 10px;
 	text-align: center;
@@ -1569,7 +1573,7 @@ ol {
 		margin-top: 50px;
 	}
 	.member {
-		width: calc(33.333333% - 25px);
+		width: calc(40% - 25px);
 		margin-bottom: 30px;
 		padding: 35px 10px;
 	}
@@ -1707,6 +1711,7 @@ ol {
 	}
 	.member {
 		width: 100%;
+    max-width:400px;
 		margin-bottom: 30px;
 		margin-left: 0;
 	}
