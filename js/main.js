@@ -50,29 +50,29 @@ $(window).on('load', function() {
 	/*------------------
 		Review
 	--------------------*/
-	var review_meta = $(".review-meta-slider");
+	// var review_meta = $(".review-meta-slider");
     var review_text = $(".review-text-slider");
 
 
     review_text.on('changed.owl.carousel', function(event) {
-		review_meta.trigger('next.owl.carousel');
+		// review_meta.trigger('next.owl.carousel');
 	});
 
-	review_meta.owlCarousel({
-		loop: true,
-		nav: false,
-		dots: true,
-		items: 3,
-		center: true,
-		margin: 20,
-		autoplay: true,
-		mouseDrag: false,
-	});
+	// review_meta.owlCarousel({
+	// 	loop: true,
+	// 	nav: false,
+	// 	dots: true,
+	// 	items: 3,
+	// 	center: true,
+	// 	margin: 20,
+	// 	autoplay: true,
+	// 	mouseDrag: false,
+	// });
 
 
 	review_text.owlCarousel({
 		loop: true,
-		nav: true,
+		nav: false,
 		dots: false,
 		items: 1,
 		margin: 20,
@@ -107,6 +107,8 @@ $(window).on('load', function() {
       speed: 300,
       slidesToShow: 3,
       slidesToScroll: 3,
+      autoplay: true,
+      autoplaySpeed: 3000,
       responsive: [
         {
           breakpoint: 1200,
@@ -121,7 +123,8 @@ $(window).on('load', function() {
           breakpoint: 750,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+
           }
         },
       ]
@@ -136,8 +139,8 @@ $( document ).ready(function() {
   var pointpath_2 = anime.path("#pointpath_2")
   var pointpath_3 = anime.path("#pointpath_3")
   var logoAnimation = anime.timeline({
-    direction: 'alternate',
-    loop: '2000',
+    // direction: 'alternate',
+    // loop: '2000',
     autoplay: true
   });
   logoAnimation
