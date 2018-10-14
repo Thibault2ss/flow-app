@@ -8,7 +8,6 @@
 
 'use strict';
 
-
 $(window).on('load', function() {
 	/*------------------
 		Preloder
@@ -19,6 +18,16 @@ $(window).on('load', function() {
 });
 
 (function($) {
+  /*------------------
+		Smooth scroll to anchors
+	--------------------*/
+  $(document).on('click', 'a[href^="#"]:not([role="tab"])', function (event) {
+      event.preventDefault();
+
+      $('html, body').animate({
+          scrollTop: $($.attr(this, 'href')).offset().top
+      }, 500);
+  });
 
 	/*------------------
 		Navigation
@@ -41,29 +50,29 @@ $(window).on('load', function() {
 	/*------------------
 		Review
 	--------------------*/
-	var review_meta = $(".review-meta-slider");
+	// var review_meta = $(".review-meta-slider");
     var review_text = $(".review-text-slider");
 
 
     review_text.on('changed.owl.carousel', function(event) {
-		review_meta.trigger('next.owl.carousel');
+		// review_meta.trigger('next.owl.carousel');
 	});
 
-	review_meta.owlCarousel({
-		loop: true,
-		nav: false,
-		dots: true,
-		items: 3,
-		center: true,
-		margin: 20,
-		autoplay: true,
-		mouseDrag: false,
-	});
+	// review_meta.owlCarousel({
+	// 	loop: true,
+	// 	nav: false,
+	// 	dots: true,
+	// 	items: 3,
+	// 	center: true,
+	// 	margin: 20,
+	// 	autoplay: true,
+	// 	mouseDrag: false,
+	// });
 
 
 	review_text.owlCarousel({
 		loop: true,
-		nav: true,
+		nav: false,
 		dots: false,
 		items: 1,
 		margin: 20,
@@ -88,6 +97,38 @@ $(window).on('load', function() {
     });
 
 
+    // scrollreveal
+    ScrollReveal().reveal('.scrollreveal', { delay: 0 , duration:1000, reset:false, distance:'50px', origin:'bottom'});
+
+    // carousel articles
+    $('.article-carousel').slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 750,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+
+          }
+        },
+      ]
+    });
 
 })(jQuery);
 
@@ -99,8 +140,8 @@ $( document ).ready(function() {
   var pointpath_3 = anime.path("#pointpath_3")
   var logoAnimation = anime.timeline({
     // direction: 'alternate',
-    // loop: 3,
-    autoplay: false
+    // loop: '2000',
+    autoplay: true
   });
   logoAnimation
     .add({
@@ -244,6 +285,6 @@ $( document ).ready(function() {
       elasticity: 700
     })
 
-  logoAnimation.play()
+  // logoAnimation.play()
 
 })
