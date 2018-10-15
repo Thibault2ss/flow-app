@@ -50,24 +50,24 @@ $(window).on('load', function() {
 	/*------------------
 		Review
 	--------------------*/
-	// var review_meta = $(".review-meta-slider");
+	var review_meta = $(".review-meta-slider");
     var review_text = $(".review-text-slider");
 
 
     review_text.on('changed.owl.carousel', function(event) {
-		// review_meta.trigger('next.owl.carousel');
+		review_meta.trigger('next.owl.carousel');
 	});
 
-	// review_meta.owlCarousel({
-	// 	loop: true,
-	// 	nav: false,
-	// 	dots: true,
-	// 	items: 3,
-	// 	center: true,
-	// 	margin: 20,
-	// 	autoplay: true,
-	// 	mouseDrag: false,
-	// });
+	review_meta.owlCarousel({
+		loop: true,
+		nav: false,
+		dots: true,
+		items: 3,
+		center: true,
+		margin: 20,
+		autoplay: false,
+		mouseDrag: false,
+	});
 
 
 	review_text.owlCarousel({
