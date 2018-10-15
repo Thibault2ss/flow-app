@@ -54,9 +54,12 @@ $(window).on('load', function() {
     var review_text = $(".review-text-slider");
 
 
-    review_text.on('changed.owl.carousel', function(event) {
-		review_meta.trigger('next.owl.carousel');
-	});
+  // review_text.on('changed.owl.carousel', function(event) {
+  //   event.item.index? review_meta.trigger('to.owl.carousel', event.item.index) : null
+	// });
+  review_meta.on('changed.owl.carousel', function(event) {
+    event.item.index ? review_text.trigger('to.owl.carousel', event.item.index+1) : null
+  });
 
 	review_meta.owlCarousel({
 		loop: true,
@@ -65,8 +68,8 @@ $(window).on('load', function() {
 		items: 3,
 		center: true,
 		margin: 20,
-		autoplay: false,
-		mouseDrag: false,
+		autoplay: true,
+		mouseDrag: true,
 	});
 
 
@@ -76,7 +79,7 @@ $(window).on('load', function() {
 		dots: false,
 		items: 1,
 		margin: 20,
-		autoplay: true,
+		autoplay: false,
 		navText: ['<i class="ti-angle-left"><i>', '<i class="ti-angle-right"><i>'],
 		animateOut: 'fadeOutDown',
     	animateIn: 'fadeInDown',
