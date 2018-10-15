@@ -117,8 +117,3 @@
 .slick-arrow.slick-hidden {
     display: none;
 }
-@media only screen and (max-width: 767px) {
-  .slick-arrow {
-      display: none;
-  }
-}
