@@ -53,12 +53,23 @@ $(window).on('load', function() {
 	var review_meta = $(".review-meta-slider");
     var review_text = $(".review-text-slider");
 
-
-  // review_text.on('changed.owl.carousel', function(event) {
-  //   event.item.index? review_meta.trigger('to.owl.carousel', event.item.index) : null
-	// });
+  var allow_callback = true;
+  review_text.on('changed.owl.carousel', function(event) {
+    if (allow_callback){
+      allow_callback = false
+      event.item.index? review_meta.trigger('to.owl.carousel', event.item.index+2) : null
+    }else{
+      allow_callback = true
+    }
+	});
   review_meta.on('changed.owl.carousel', function(event) {
-    event.item.index ? review_text.trigger('to.owl.carousel', event.item.index+1) : null
+    if (allow_callback){
+      allow_callback = false
+      event.item.index ? review_text.trigger('to.owl.carousel', event.item.index+1) : null
+    }
+    else{
+      allow_callback = true
+    }
   });
 
 	review_meta.owlCarousel({
