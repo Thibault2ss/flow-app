@@ -247,6 +247,7 @@ ol {
 	width: 40px;
 	height: 40px;
 	position: absolute;
+  border: 4px solid #673ab7;
 	top: 50%;
 	left: 50%;
 	margin-top: -13px;
